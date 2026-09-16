@@ -3,7 +3,7 @@ use serde::{Deserialize, Serialize};
 use tokio::process::Command;
 
 /// A struct defining a wifi network
-#[derive(Deserialize, Serialize)]
+#[derive(Clone, Deserialize, Serialize)]
 #[cfg_attr(feature = "utoipa", derive(utoipa::ToSchema))]
 pub struct WifiNetwork {
     /// The SSID of the access point
